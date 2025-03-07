@@ -14,13 +14,8 @@ if (process.argv.length<3) {
     process.exit(1)
   }
   
-const password = process.argv[2]
-
-const url =
-  `mongodb+srv://hanterio:${password}@fso2025.b68e4.mongodb.net/noteApp?retryWrites=true&w=majority&appName=FSO2025`
 
 mongoose.set('strictQuery',false)
-mongoose.connect(url)
 
 
 app.get('/', (request, response) => {
